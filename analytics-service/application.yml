@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: analytics-service
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+  liquibase:
+    change-log: classpath:./liquibase/db.changelog.yaml
+    enabled: true
+
+  kafka:
+    consumer:
+      group-id: analytics-service
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: "com.popov.kafka.event"

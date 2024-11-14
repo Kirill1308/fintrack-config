@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: wallet-service
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+  liquibase:
+    change-log: classpath:./liquibase/db.changelog.yaml
+    enabled: true
+
+  kafka:
+    consumer:
+      group-id: wallet-service
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
