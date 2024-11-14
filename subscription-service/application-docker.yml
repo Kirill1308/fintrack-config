@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://subscription-db:5432/subscription_service_db?currentSchema=subscription_service
+    username: sub_user
+    password: sub_pass
+    driver-class-name: org.postgresql.Driver
+
+  kafka:
+    bootstrap-servers: kafka:9092
+
+application:
+  config:
+    user-url: http://user-service:8082/users
