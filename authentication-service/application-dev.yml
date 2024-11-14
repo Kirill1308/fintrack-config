@@ -1,7 +1,3 @@
 spring:
   kafka:
     bootstrap-servers: localhost:9092
-
-application:
-  config:
-    user-url: http://localhost:9002/users

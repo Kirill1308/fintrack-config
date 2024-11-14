@@ -6,3 +6,7 @@ spring:
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+application:
+  config:
+    user-url: http://localhost:9002/users
