@@ -7,3 +7,7 @@ spring:
   cloud:
     config:
       uri: http://config-service:9297
+
+application:
+  config:
+    user-url: http://user-service:9002/users
