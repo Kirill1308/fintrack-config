@@ -2,9 +2,3 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery-service:8761/eureka
-
-# config-service/application-docker.yml
-spring:
-  cloud:
-    config:
-      uri: http://config-service:9297
