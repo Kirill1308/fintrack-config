@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://user-db:5432/user_service_db?currentSchema=user_service
+    url: jdbc:postgresql://user-db:5433/user_service_db?currentSchema=user_service
     username: '{cipher}dc2a69b822ba76cecb7b7f451d7ec2082d43caddf9af75ed5f666a83c311d452'
     password: '{cipher}dc2a69b822ba76cecb7b7f451d7ec2082d43caddf9af75ed5f666a83c311d452'
     driver-class-name: org.postgresql.Driver
