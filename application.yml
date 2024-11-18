@@ -3,3 +3,55 @@ security:
     secret: '{cipher}b5d2279f984af7aa663f1a84fac1dcf937071f642bb1f802facc4e9f0bf4b447d93ef7a368118febe957dc745fabeb06d0c47ddccef9bfcf65db80654adabaf2be4eafb4f7c56b72a99a933b2cba954d'
     access: 1  # hour
     refresh: 30 # days
+
+logging:
+  level:
+    # Global logging level
+    root: WARN
+
+    # Spring Framework logging
+    org.springframework: INFO
+    org.springframework.web: INFO
+    org.springframework.boot: INFO
+    org.springframework.security: INFO
+
+    # Hibernate and JPA logging
+    org.hibernate: WARN
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
+    # Kafka logging
+    org.apache.kafka: WARN
+
+    # Application-specific logging levels
+    com.popov:
+      auth: DEBUG
+      user: DEBUG
+      transaction: DEBUG
+      wallet: DEBUG
+      subscription: DEBUG
+      notification: DEBUG
+      collaborator: DEBUG
+      analytics: DEBUG
+
+    # Database connection logging
+    org.springframework.jdbc: DEBUG
+
+    # Eureka and discovery logging
+    org.springframework.cloud.netflix.eureka: WARN
+
+  pattern:
+    # Comprehensive log pattern
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+
+  file:
+    # Log file configuration
+    name: logs/application.log
+
+  logback:
+    rollingpolicy:
+      # Log rotation policies
+      max-file-size: 10MB
+      max-history: 30
+      clean-history-on-start: true
