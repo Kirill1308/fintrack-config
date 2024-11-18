@@ -4,4 +4,4 @@ spring:
     password: '{cipher}f080fd5263a721da3a997a809589be0f0dd2abbbcf8313376e81f6742b7f9f3e3784ecdff7cc993fcf22da43de18520d'
 
 kafka:
-  bootstrap-servers: localhost:9092
+  bootstrap-servers: broker:29092
