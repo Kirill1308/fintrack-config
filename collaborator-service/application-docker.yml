@@ -1,8 +1,9 @@
 eureka:
   client:
-    register-with-eureka: true
-    fetch-registry: true
     service-url:
       defaultZone: http://discovery-service:8761/eureka/
-  instance:
-    hostname: discovery-service
+
+application:
+  config:
+    subscription-tier-url: http://subscription-service:9005/subscription-tiers
+    wallet-url: http://wallet-service:9004/wallets
