@@ -1,8 +1,9 @@
-#eureka:
-#  client:
-#    register-with-eureka: true
-#    fetch-registry: true
-#    service-url:
-#      defaultZone: http://discovery-service:8761/eureka/
-#  instance:
-#    hostname: discovery-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-service:8761/eureka/
+
+application:
+  config:
+    collaborator-url: http://collaborator-service:9017/collaborators
+    wallet-url: http://wallet-service:9004/wallets
