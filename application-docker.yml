@@ -11,4 +11,6 @@ application:
   config:
     user-url: http://user-service:9002/users
     subscription-url: http://subscription-service:8083/subscriptions
-
+    subscription-tier-url: http://subscription-service:8083/subscription-tiers
+    wallet-url: http://wallet-service:8084/wallets
+    collaborator-url: http://collaborator-service:8085/collaborators

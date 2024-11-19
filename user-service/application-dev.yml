@@ -4,19 +4,3 @@ spring:
     username: '{cipher}dc2a69b822ba76cecb7b7f451d7ec2082d43caddf9af75ed5f666a83c311d452'
     password: '{cipher}dc2a69b822ba76cecb7b7f451d7ec2082d43caddf9af75ed5f666a83c311d452'
     driver-class-name: org.postgresql.Driver
-
-  kafka:
-    bootstrap-servers: localhost:9092
-
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-    instance:
-      hostname: localhost
-
-application:
-  config:
-    subscription-url: http://localhost:8083/subscriptions
