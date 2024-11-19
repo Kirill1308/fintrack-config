@@ -9,5 +9,5 @@ spring:
 
 application:
   config:
-    collaborator-url: http://collaborator-service:9017/collaborators
-    wallet-url: http://wallet-service:9004/wallets
+    collaborator-url: http://collaborator-service:8085/collaborators
+    wallet-url: http://wallet-service:8084/wallets

@@ -26,6 +26,6 @@ eureka:
 
 application:
   config:
-    collaborator-url: http://localhost:9017/collaborators
-    subscription-tier-url: http://localhost:9005/subscription-tiers
-    wallet-url: http://localhost:9004/wallets
+    collaborator-url: http://localhost:8085/collaborators
+    subscription-tier-url: http://localhost:8083/subscription-tiers
+    wallet-url: http://localhost:8084/wallets

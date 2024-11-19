@@ -19,5 +19,5 @@ eureka:
 
 application:
   config:
-    subscription-tier-url: http://localhost:9005/subscription-tiers
-    wallet-url: http://localhost:9004/wallets
+    subscription-tier-url: http://localhost:8083/subscription-tiers
+    wallet-url: http://localhost:8084/wallets

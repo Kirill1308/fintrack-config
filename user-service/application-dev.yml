@@ -19,4 +19,4 @@ eureka:
 
 application:
   config:
-    subscription-url: http://localhost:9005/subscriptions
+    subscription-url: http://localhost:8083/subscriptions

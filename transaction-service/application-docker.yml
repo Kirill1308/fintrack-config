@@ -9,6 +9,6 @@ spring:
 
 application:
   config:
-    collaborator-url: http://collaborator-service:9017/collaborators
-    subscription-tier-url: http://subscription-service:9005/subscription-tiers
-    wallet-url: http://wallet-service:9004/wallets
+    collaborator-url: http://collaborator-service:8085/collaborators
+    subscription-tier-url: http://subscription-service:8083/subscription-tiers
+    wallet-url: http://wallet-service:8084/wallets

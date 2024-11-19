@@ -19,5 +19,5 @@ eureka:
 
 application:
   config:
-    subscription-tier-url: http://localhost:9005/subscription-tiers
-    collaborator-url: http://localhost:9017/collaborators
+    subscription-tier-url: http://localhost:8083/subscription-tiers
+    collaborator-url: http://localhost:8085/collaborators

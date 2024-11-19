@@ -9,5 +9,5 @@ spring:
 
 application:
   config:
-    subscription-tier-url: http://subscription-service:9005/subscription-tiers
-    collaborator-url: http://collaborator-service:9017/collaborators
+    subscription-tier-url: http://subscription-service:8083/subscription-tiers
+    collaborator-url: http://collaborator-service:8085/collaborators
