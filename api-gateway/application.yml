@@ -6,3 +6,28 @@ spring:
       discovery:
         locator:
           enabled: true
+      routes:
+        - id: openapi
+          uri: http://localhost:${server.port}
+          predicates:
+            - Path=/v3/api-docs/**
+          filters:
+            - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
+
+      springdoc:
+        swagger-ui:
+          urls:
+            - url: /v3/api-docs/user
+              name: User Service
+            - url: /v3/api-docs/wallet
+              name: Wallet Service
+            - url: /v3/api-docs/transaction
+              name: Transaction Service
+            - url: /v3/api-docs/subscription
+              name: Subscription Service
+            - url: /v3/api-docs/collaborator
+              name: Collaborator Service
+            - url: /v3/api-docs/analytics
+              name: Analytics Service
+            - url: /v3/api-docs/authentication
+              name: Authentication Service
