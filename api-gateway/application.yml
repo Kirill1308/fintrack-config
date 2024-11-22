@@ -7,27 +7,52 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: openapi
-          uri: http://localhost:${server.port}
+        # Dynamically route requests to services using service discovery
+        - id: user-service
+          uri: lb://USER-SERVICE
           predicates:
-            - Path=/v3/api-docs/**
-          filters:
-            - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
+            - Path=/user/**
+        - id: wallet-service
+          uri: lb://WALLET-SERVICE
+          predicates:
+            - Path=/wallet/**
+        - id: transaction-service
+          uri: lb://TRANSACTION-SERVICE
+          predicates:
+            - Path=/transaction/**
+        - id: subscription-service
+          uri: lb://SUBSCRIPTION-SERVICE
+          predicates:
+            - Path=/subscription/**
+        - id: collaborator-service
+          uri: lb://COLLABORATOR-SERVICE
+          predicates:
+            - Path=/collaborator/**
+        - id: analytics-service
+          uri: lb://ANALYTICS-SERVICE
+          predicates:
+            - Path=/analytics/**
+        - id: authentication-service
+          uri: lb://AUTHENTICATION-SERVICE
+          predicates:
+            - Path=/auth/**
 
-      springdoc:
-        swagger-ui:
-          urls:
-            - url: /v3/api-docs/user
-              name: User Service
-            - url: /v3/api-docs/wallet
-              name: Wallet Service
-            - url: /v3/api-docs/transaction
-              name: Transaction Service
-            - url: /v3/api-docs/subscription
-              name: Subscription Service
-            - url: /v3/api-docs/collaborator
-              name: Collaborator Service
-            - url: /v3/api-docs/analytics
-              name: Analytics Service
-            - url: /v3/api-docs/authentication
-              name: Authentication Service
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    urls:
+      - url: /v3/api-docs/user
+        name: User Service
+      - url: /v3/api-docs/wallet
+        name: Wallet Service
+      - url: /v3/api-docs/transaction
+        name: Transaction Service
+      - url: /v3/api-docs/subscription
+        name: Subscription Service
+      - url: /v3/api-docs/collaborator
+        name: Collaborator Service
+      - url: /v3/api-docs/analytics
+        name: Analytics Service
+      - url: /v3/api-docs/authentication
+        name: Authentication Service
