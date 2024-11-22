@@ -17,5 +17,5 @@ springdoc:
     path: /v3/api-docs
   swagger-ui:
     urls:
-      - url: /v3/api-docs/user
+      - url: /v3/api-docs/users
         name: User Service
