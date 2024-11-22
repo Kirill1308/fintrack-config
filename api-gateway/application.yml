@@ -7,35 +7,10 @@ spring:
         locator:
           enabled: true
       routes:
-        # Dynamically route requests to services using service discovery
         - id: user-service
-          uri: lb://USER-SERVICE
+          uri: "http://localhost:9002/"
           predicates:
-            - Path=/user/**
-        - id: wallet-service
-          uri: lb://WALLET-SERVICE
-          predicates:
-            - Path=/wallet/**
-        - id: transaction-service
-          uri: lb://TRANSACTION-SERVICE
-          predicates:
-            - Path=/transaction/**
-        - id: subscription-service
-          uri: lb://SUBSCRIPTION-SERVICE
-          predicates:
-            - Path=/subscription/**
-        - id: collaborator-service
-          uri: lb://COLLABORATOR-SERVICE
-          predicates:
-            - Path=/collaborator/**
-        - id: analytics-service
-          uri: lb://ANALYTICS-SERVICE
-          predicates:
-            - Path=/analytics/**
-        - id: authentication-service
-          uri: lb://AUTHENTICATION-SERVICE
-          predicates:
-            - Path=/auth/**
+            - Path=/user/** , /v3/api-docs/user
 
 springdoc:
   api-docs:
@@ -44,15 +19,3 @@ springdoc:
     urls:
       - url: /v3/api-docs/user
         name: User Service
-      - url: /v3/api-docs/wallet
-        name: Wallet Service
-      - url: /v3/api-docs/transaction
-        name: Transaction Service
-      - url: /v3/api-docs/subscription
-        name: Subscription Service
-      - url: /v3/api-docs/collaborator
-        name: Collaborator Service
-      - url: /v3/api-docs/analytics
-        name: Analytics Service
-      - url: /v3/api-docs/authentication
-        name: Authentication Service
