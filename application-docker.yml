@@ -9,6 +9,7 @@ spring:
 
 application:
   config:
+    web-url: http://api-gateway:8080
     user-url: http://user-service:9002/users
     subscription-url: http://subscription-service:8083/subscriptions
     subscription-tier-url: http://subscription-service:8083/subscription-tiers
