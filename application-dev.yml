@@ -9,10 +9,9 @@ spring:
 
 application:
   config:
-    web-url: http://localhost:8083
+    web-url: http://localhost:9003
     user-url: http://localhost:9002/users
     subscription-url: http://localhost:8083/subscriptions
     subscription-tier-url: http://localhost:8083/subscription-tiers
     wallet-url: http://localhost:8084/wallets
     collaborator-url: http://localhost:8085/collaborators
-
