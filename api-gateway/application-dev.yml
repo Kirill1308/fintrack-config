@@ -13,3 +13,10 @@ spring:
           uri: "http://localhost:9002/"
           predicates:
             - Path=/user/* , /v3/api-docs/user
+      globalcors:
+        cors-configurations:
+          '[/**]': # Applies to all paths
+            allowedOrigins: "*"
+            allowedMethods: GET, POST, PUT, DELETE, OPTIONS
+            allowedHeaders: "*"
+            allowCredentials: true
