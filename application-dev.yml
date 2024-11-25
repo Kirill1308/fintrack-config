@@ -15,3 +15,4 @@ application:
     subscription-tier-url: http://localhost:8083/subscription-tiers
     wallet-url: http://localhost:8084/wallets
     collaborator-url: http://localhost:8085/collaborators
+
