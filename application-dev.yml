@@ -2,6 +2,7 @@ base-url: http://localhost
 
 ports:
   web-service: 9003
+  config-service: 8888
   gateway-service: 9003
   auth-service: 9001
   user-service: 9002
