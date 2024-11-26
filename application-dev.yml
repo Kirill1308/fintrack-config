@@ -7,11 +7,24 @@ spring:
   kafka:
     bootstrap-servers: localhost:9092
 
+ports:
+  web-service: 9003
+  gateway-service: 9003
+  auth-service: 9001
+  user-service: 9002
+  subscription-service: 8083
+  wallet-service: 8084
+  collaborator-service: 8085
+  transaction-service: 8086
+  analytics-service: 8087
+
 application:
   config:
-    web-url: http://localhost:9003
-    user-url: http://localhost:9002/users
-    subscription-url: http://localhost:8083/subscriptions
-    subscription-tier-url: http://localhost:8083/subscription-tiers
-    wallet-url: http://localhost:8084/wallets
-    collaborator-url: http://localhost:8085/collaborators
+    web-url: http://localhost:${ports.web-service}
+    user-url: http://localhost:${ports.user-service}/users
+    subscription-url: http://localhost:${ports.subscription-service}/subscriptions
+    subscription-tier-url: http://localhost:${ports.subscription-service}/subscription-tiers
+    wallet-url: http://localhost:${ports.wallet-service}/wallets
+    collaborator-url: http://localhost:${ports.collaborator-service}/collaborators
+    transaction-url: http://localhost:${ports.transaction-service}/transactions
+    analytics-url: http://localhost:${ports.analytics-service}/analytics

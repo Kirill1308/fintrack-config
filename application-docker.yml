@@ -7,11 +7,24 @@ spring:
   kafka:
     bootstrap-servers: broker:29092
 
+ports:
+  web-service: 8080
+  gateway-service: 8080
+  auth-service: 9001
+  user-service: 9002
+  subscription-service: 8083
+  wallet-service: 8084
+  collaborator-service: 8085
+  transaction-service: 8086
+  analytics-service: 8087
+
 application:
   config:
-    web-url: http://api-gateway:8080
-    user-url: http://user-service:9002/users
-    subscription-url: http://subscription-service:8083/subscriptions
-    subscription-tier-url: http://subscription-service:8083/subscription-tiers
-    wallet-url: http://wallet-service:8084/wallets
-    collaborator-url: http://collaborator-service:8085/collaborators
+    web-url: http://api-gateway:${ports.web-service}
+    user-url: http://user-service:${ports.user-service}/users
+    subscription-url: http://subscription-service:${ports.subscription-service}/subscriptions
+    subscription-tier-url: http://subscription-service:${ports.subscription-service}/subscription-tiers
+    wallet-url: http://wallet-service:${ports.wallet-service}/wallets
+    collaborator-url: http://collaborator-service:${ports.collaborator-service}/collaborators
+    transaction-url: http://transaction-service:${ports.transaction-service}/transactions
+    analytics-url: http://analytics-service:${ports.analytics-service}/analytics
