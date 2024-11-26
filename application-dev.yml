@@ -2,7 +2,7 @@ base-url: http://localhost
 
 ports:
   web-service: 8090
-  gateway-service: 8090
+  gateway-service: 8099
   auth-service: 8091
   user-service: 8092
   subscription-service: 8093
