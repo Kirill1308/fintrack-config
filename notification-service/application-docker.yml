@@ -1,7 +1,0 @@
-spring:
-  mail:
-    username: '{cipher}7eac411b37174a202460c4fa2f20810c78e2a3df5e2c04111c39ec27fb4f39baa5558d76d23c738f8c1850b7d6cb7f9d'
-    password: '{cipher}f080fd5263a721da3a997a809589be0f0dd2abbbcf8313376e81f6742b7f9f3e3784ecdff7cc993fcf22da43de18520d'
-
-  kafka:
-    bootstrap-servers: broker:29092
