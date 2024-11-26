@@ -4,6 +4,13 @@ security:
     access: 1  # hour
     refresh: 30 # days
 
+ports:
+  user-service: 9002
+  web-service: 9003
+  subscription-service: 8083
+  wallet-service: 8084
+  collaborator-service: 8085
+
 logging:
   level:
     # Global logging level
