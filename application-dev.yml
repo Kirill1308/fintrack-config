@@ -24,37 +24,37 @@ spring:
         response-timeout: 7s
       routes:
         - id: authentication-service
-          uri: "http://localhost:9001/"
+          uri: "${base-url}:${ports.auth-service}/"
           predicates:
             - Path=/authentication/* , /v3/api-docs/authentication
 
         - id: user-service
-          uri: "http://localhost:9002/"
+          uri: "${base-url}:${ports.user-service}/"
           predicates:
             - Path=/user/* , /v3/api-docs/user
 
         - id: subscription-service
-          uri: "http://localhost:8083/"
+          uri: "${base-url}:${ports.subscription-service}/"
           predicates:
             - Path=/subscription/*, /v3/api-docs/subscription
 
         - id: wallet-service
-          uri: "http://localhost:8084/"
+          uri: "${base-url}:${ports.wallet-service}/"
           predicates:
             - Path=/wallet/*, /v3/api-docs/wallet
 
         - id: collaborator-service
-          uri: "http://localhost:8085/"
+          uri: "${base-url}:${ports.collaborator-service}/"
           predicates:
             - Path=/collaborator/*, /v3/api-docs/collaborator
 
         - id: transaction-service
-          uri: "http://localhost:8086/"
+          uri: "${base-url}:${ports.transaction-service}/"
           predicates:
             - Path=/transaction/*, /v3/api-docs/transaction
 
         - id: analytics-service
-          uri: "http://localhost:8087/"
+          uri: "${base-url}:${ports.analytics-service}/"
           predicates:
             - Path=/analytics/*, /v3/api-docs/analytics
 
