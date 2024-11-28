@@ -4,3 +4,9 @@ spring:
     username: '{cipher}dc2a69b822ba76cecb7b7f451d7ec2082d43caddf9af75ed5f666a83c311d452'
     password: '{cipher}dc2a69b822ba76cecb7b7f451d7ec2082d43caddf9af75ed5f666a83c311d452'
     driver-class-name: org.postgresql.Driver
+
+minio:
+  bucket: user-avatars
+  url: http://localhost:9000
+  accessKey: '{cipher}0a62c347039f2b69de0f95e11899ca42742a1b5d85fcd2e12b98d6af1d2c6174'
+  secretKey: '{cipher}0a62c347039f2b69de0f95e11899ca42742a1b5d85fcd2e12b98d6af1d2c6174'
