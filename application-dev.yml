@@ -1,7 +1,7 @@
 base-url: http://localhost
 
 ports:
-  web-service: 8099
+  web-service: 3000
   gateway-service: 8099
   auth-service: 8091
   user-service: 8092
