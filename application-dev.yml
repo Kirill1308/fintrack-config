@@ -20,15 +20,6 @@ eureka:
 spring:
   cloud:
     gateway:
-      globalcors:
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: "http://localhost:3000"
-            allowedMethods:
-              - GET
-              - POST
-              - PUT
-              - DELETE
       httpclient:
         connect-timeout: 10000
         response-timeout: 7s
@@ -36,7 +27,7 @@ spring:
         - id: authentication-service
           uri: "${base-url}:${ports.auth-service}/"
           predicates:
-            - Path=/authentication/* , /v3/api-docs/authentication
+            - Path=/authentication/* , /v3/api-docs/authentication, /auth/*
 
         - id: user-service
           uri: "${base-url}:${ports.user-service}/"
