@@ -27,7 +27,7 @@ spring:
         - id: authentication-service
           uri: "${base-url}:${ports.auth-service}/"
           predicates:
-            - Path=/authentication/* , /v3/api-docs/authentication, /auth/*
+            - Path=/authentication/* , /v3/api-docs/authentication
 
         - id: user-service
           uri: "${base-url}:${ports.user-service}/"
