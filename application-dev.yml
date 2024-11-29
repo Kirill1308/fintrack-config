@@ -61,6 +61,10 @@ spring:
 
   kafka:
     bootstrap-servers: ${base-url}:9092
+  doc:
+    swagger:
+      ui:
+        allowed-origins: ${base-url}:${ports.gateway-service}
 
 application:
   config:
