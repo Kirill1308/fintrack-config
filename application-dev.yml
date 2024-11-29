@@ -65,6 +65,7 @@ spring:
 application:
   config:
     web-url: ${base-url}:${ports.web-service}
+    gateway-url: ${base-url}:${ports.gateway-service}
     user-url: ${base-url}:${ports.user-service}/users
     subscription-url: ${base-url}:${ports.subscription-service}/subscriptions
     subscription-tier-url: ${base-url}:${ports.subscription-service}/subscription-tiers
