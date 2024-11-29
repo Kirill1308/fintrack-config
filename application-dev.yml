@@ -1,4 +1,4 @@
-base-url: https://localhost
+base-url: http://localhost
 
 ports:
   web-service: 3000
